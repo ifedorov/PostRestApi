@@ -1,8 +1,8 @@
 from django.contrib.auth import authenticate
 from django.core import exceptions
-from django.shortcuts import get_object_or_404
-from rest_framework import serializers
 from django.utils.translation import gettext as _
+from rest_framework import serializers
+
 from StarNaviApp.models import Post, User, Like
 
 
@@ -30,8 +30,10 @@ class AuthCustomTokenSerializer(serializers.Serializer):
         attrs['user'] = user
         return attrs
 
+
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.CharField(read_only=True)
+
     class Meta:
         model = Post
         fields = ('id', 'author', 'content', 'date_dump')
@@ -48,6 +50,7 @@ class UserSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
+
 class LikeSerializer(serializers.ModelSerializer):
     is_like = serializers.BooleanField(read_only=True)
     post = serializers.CharField(read_only=True)
@@ -58,7 +61,7 @@ class LikeSerializer(serializers.ModelSerializer):
         fields = ('id', 'is_like', 'post', 'user')
 
     def create(self, validated_data):
-        instance, _ = Like.objects.update_or_create(**validated_data, defaults={ 'is_like': True})
+        instance, _ = Like.objects.update_or_create(**validated_data, defaults={'is_like': True})
         return instance
 
 

@@ -7,17 +7,21 @@ import requests
 
 URL = 'http://127.0.0.1:8000'
 
-domains = [ "hotmail.com", "gmail.com", "aol.com", "mail.com" , "mail.kz", "yahoo.com"]
+domains = ["hotmail.com", "gmail.com", "aol.com", "mail.com", "mail.kz", "yahoo.com"]
 letters = string.ascii_lowercase[:12]
+
 
 def get_random_domain(domains):
     return random.choice(domains)
 
+
 def get_random_name(letters, length):
     return ''.join(random.choice(letters) for i in range(length))
 
+
 def generate_random_email(length):
     return get_random_name(letters, length) + '@' + get_random_domain(domains)
+
 
 def generate_content():
     return ' '.join([get_random_name(letters, 8) for i in range(100)])
@@ -88,14 +92,11 @@ if __name__ == '__main__':
     for token in tokens:
         if token:
             post_count = random.randint(0, max_posts_per_user)
-            user_posts =[create_post(generate_content(), token) for i in range(post_count)]
+            user_posts = [create_post(generate_content(), token) for i in range(post_count)]
             posts.extend(user_posts)
-
 
     for token in tokens:
         likes_count = random.randint(0, max_likes_per_user)
         for i in range(likes_count):
             post_id = random.choice(posts)
             like_post(post_id, token)
-
-

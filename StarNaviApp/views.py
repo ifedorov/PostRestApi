@@ -1,9 +1,8 @@
 # Create your views here.
 from rest_framework import permissions, status, mixins
 from rest_framework.authtoken.models import Token
-from rest_framework.decorators import detail_route
 from rest_framework.generics import get_object_or_404
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
@@ -59,7 +58,6 @@ class UserCreateViewSet(mixins.CreateModelMixin,
     permission_classes = (AllowAny,)
     http_method_names = ['post']
 
-
     def token(self, request):
         serializer = AuthCustomTokenSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -78,5 +76,3 @@ class UserCreateViewSet(mixins.CreateModelMixin,
             return Response('User created successfully', status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
