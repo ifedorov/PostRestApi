@@ -1,0 +1,374 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add like",
+      "content_type": 6,
+      "codename": "add_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change like",
+      "content_type": 6,
+      "codename": "change_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete like",
+      "content_type": 6,
+      "codename": "delete_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 7,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 7,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 7,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 8,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 8,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 8,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 9,
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 9,
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 9,
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "StarNaviApp.user",
+    "pk": "11bfa4a725f846c8a14020894fe2c141",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$9ZEDllkTur3M$f8E6K1ZGWLtn0Mt+Rie6Kon4sOScKtqCxmh1kf2FXa0=",
+      "last_login": null,
+      "is_superuser": false,
+      "date_dump": "2018-03-03T11:40:19.979Z",
+      "date_updated": "2018-03-03T11:40:20.101Z",
+      "is_active": true,
+      "email": "dont5@mail.me",
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "StarNaviApp.user",
+    "pk": "1b43720b68cd4d71b822122463fbf368",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$lcahJWGB7U2d$MuiQOtvVG4E+Cnix4tIy6wEO9Og/sfCQbF+FI3Tquyc=",
+      "last_login": null,
+      "is_superuser": false,
+      "date_dump": "2018-03-03T11:35:20.240Z",
+      "date_updated": "2018-03-03T11:35:20.364Z",
+      "is_active": true,
+      "email": "dont2@mail.me",
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "StarNaviApp.user",
+    "pk": "97c46a5db55d420abe31ff31535d7720",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$0JymF7Qj4dL3$PJ3OHSahEHSMrogZa6SiGwUOiGrkb+VJvNXyFOQH6CI=",
+      "last_login": null,
+      "is_superuser": false,
+      "date_dump": "2018-03-03T11:36:47.875Z",
+      "date_updated": "2018-03-03T11:36:48.000Z",
+      "is_active": true,
+      "email": "dont3@mail.me",
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "StarNaviApp.user",
+    "pk": "a93b8bc252164589aefe574d53919e17",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$IKM41J2XDhjD$LaDvQ4ZPuk97Q7HgZH0SYcNaRws85bSG0Z+q+zIAJcE=",
+      "last_login": "2018-03-03T10:40:56.816Z",
+      "is_superuser": true,
+      "date_dump": "2018-03-03T09:13:54.417Z",
+      "date_updated": "2018-03-03T09:13:54.417Z",
+      "is_active": true,
+      "email": "dont@mail.me",
+      "is_staff": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "StarNaviApp.user",
+    "pk": "c3cd92e779574472bf21b5ae57beed4c",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$d1LbPJ2rjm3v$8y1B2sprHgGZwaymfgm65mvyiluiBTYPTghOjPlWVb8=",
+      "last_login": null,
+      "is_superuser": false,
+      "date_dump": "2018-03-03T11:22:43.093Z",
+      "date_updated": "2018-03-03T11:22:43.211Z",
+      "is_active": true,
+      "email": "dont1@mail.me",
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "StarNaviApp.user",
+    "pk": "e842c0bffe264627b453d38bce77a217",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$KTxi48HYlKWM$C9aqE73gr0oAAQetjr3H+GO1Y20OM9t+EHK0Uj16P8M=",
+      "last_login": null,
+      "is_superuser": false,
+      "date_dump": "2018-03-03T11:37:30.603Z",
+      "date_updated": "2018-03-03T11:37:30.724Z",
+      "is_active": true,
+      "email": "dont4@mail.me",
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "StarNaviApp.post",
+    "pk": "2b074585316545549f27484d9e040ab9",
+    "fields": {
+      "date_dump": "2018-03-03T10:25:28.702Z",
+      "date_updated": "2018-03-03T10:25:28.702Z",
+      "is_active": true,
+      "content": "text2",
+      "author": "a93b8bc252164589aefe574d53919e17"
+    }
+  },
+  {
+    "model": "StarNaviApp.post",
+    "pk": "a4bfa573ca31497384fbaeba625ae614",
+    "fields": {
+      "date_dump": "2018-03-03T10:24:51.403Z",
+      "date_updated": "2018-03-03T10:24:51.403Z",
+      "is_active": true,
+      "content": "text1",
+      "author": "a93b8bc252164589aefe574d53919e17"
+    }
+  },
+  {
+    "model": "StarNaviApp.post",
+    "pk": "d6fe8f7e6e9c4929ad7fdfaad1cc1e10",
+    "fields": {
+      "date_dump": "2018-03-03T10:41:03.114Z",
+      "date_updated": "2018-03-03T10:41:03.114Z",
+      "is_active": true,
+      "content": "text3",
+      "author": "a93b8bc252164589aefe574d53919e17"
+    }
+  }
+]
