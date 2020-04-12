@@ -243,7 +243,7 @@
     }
   },
   {
-    "model": "StarNaviApp.user",
+    "model": "starnavi_app.user",
     "pk": "11bfa4a725f846c8a14020894fe2c141",
     "fields": {
       "password": "pbkdf2_sha256$100000$9ZEDllkTur3M$f8E6K1ZGWLtn0Mt+Rie6Kon4sOScKtqCxmh1kf2FXa0=",
@@ -259,7 +259,7 @@
     }
   },
   {
-    "model": "StarNaviApp.user",
+    "model": "starnavi_app.user",
     "pk": "1b43720b68cd4d71b822122463fbf368",
     "fields": {
       "password": "pbkdf2_sha256$100000$lcahJWGB7U2d$MuiQOtvVG4E+Cnix4tIy6wEO9Og/sfCQbF+FI3Tquyc=",
@@ -275,7 +275,7 @@
     }
   },
   {
-    "model": "StarNaviApp.user",
+    "model": "starnavi_app.user",
     "pk": "97c46a5db55d420abe31ff31535d7720",
     "fields": {
       "password": "pbkdf2_sha256$100000$0JymF7Qj4dL3$PJ3OHSahEHSMrogZa6SiGwUOiGrkb+VJvNXyFOQH6CI=",
@@ -291,7 +291,7 @@
     }
   },
   {
-    "model": "StarNaviApp.user",
+    "model": "starnavi_app.user",
     "pk": "a93b8bc252164589aefe574d53919e17",
     "fields": {
       "password": "pbkdf2_sha256$100000$IKM41J2XDhjD$LaDvQ4ZPuk97Q7HgZH0SYcNaRws85bSG0Z+q+zIAJcE=",
@@ -307,7 +307,7 @@
     }
   },
   {
-    "model": "StarNaviApp.user",
+    "model": "starnavi_app.user",
     "pk": "c3cd92e779574472bf21b5ae57beed4c",
     "fields": {
       "password": "pbkdf2_sha256$100000$d1LbPJ2rjm3v$8y1B2sprHgGZwaymfgm65mvyiluiBTYPTghOjPlWVb8=",
@@ -323,7 +323,7 @@
     }
   },
   {
-    "model": "StarNaviApp.user",
+    "model": "starnavi_app.user",
     "pk": "e842c0bffe264627b453d38bce77a217",
     "fields": {
       "password": "pbkdf2_sha256$100000$KTxi48HYlKWM$C9aqE73gr0oAAQetjr3H+GO1Y20OM9t+EHK0Uj16P8M=",
@@ -339,7 +339,7 @@
     }
   },
   {
-    "model": "StarNaviApp.post",
+    "model": "starnavi_app.post",
     "pk": "2b074585316545549f27484d9e040ab9",
     "fields": {
       "date_dump": "2018-03-03T10:25:28.702Z",
@@ -350,7 +350,7 @@
     }
   },
   {
-    "model": "StarNaviApp.post",
+    "model": "starnavi_app.post",
     "pk": "a4bfa573ca31497384fbaeba625ae614",
     "fields": {
       "date_dump": "2018-03-03T10:24:51.403Z",
@@ -361,7 +361,7 @@
     }
   },
   {
-    "model": "StarNaviApp.post",
+    "model": "starnavi_app.post",
     "pk": "d6fe8f7e6e9c4929ad7fdfaad1cc1e10",
     "fields": {
       "date_dump": "2018-03-03T10:41:03.114Z",

@@ -7,17 +7,13 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.models import BaseUserManager
+
 from rest_framework.authtoken.models import Token
-
-
-# Create your models here.
 
 
 def get_uuid():
     return uuid.uuid4().hex
-
-
-from django.contrib.auth.models import BaseUserManager
 
 
 class MyUserManager(BaseUserManager):
@@ -51,7 +47,8 @@ class MyUserManager(BaseUserManager):
 
 
 class Base(models.Model):
-    id = models.CharField(primary_key=True, default=get_uuid, editable=False, max_length=32, unique=True)
+    id = models.CharField(primary_key=True, default=get_uuid, editable=False,
+                          max_length=32, unique=True)
     date_dump = models.DateTimeField(editable=False, auto_now_add=True)
     date_updated = models.DateTimeField(editable=False, auto_now=True)
     is_active = models.BooleanField(default=True)
@@ -63,11 +60,13 @@ class Base(models.Model):
 class User(AbstractBaseUser, PermissionsMixin, Base):
     email = models.EmailField(_('email address'), unique=True)
     objects = MyUserManager()
-
-    is_staff = models.BooleanField(_('staff status'), default=False,
-                                   help_text=_('Designates whether the user can log into this admin '
-                                               'site.'))
-
+    is_staff = models.BooleanField(
+        _('staff status'),
+        default=False,
+        help_text=_(
+            'Designates whether the user can log into this admin site.'
+        )
+    )
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 

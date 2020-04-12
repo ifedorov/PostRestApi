@@ -1,14 +1,17 @@
-# Create your views here.
 from rest_framework import permissions, status, mixins
 from rest_framework.authtoken.models import Token
+from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
-from StarNaviApp.models import Post
-from StarNaviApp.serializers import PostSerializer, UserSerializer, AuthCustomTokenSerializer, LikeSerializer, \
-    UnlikeSerializer
+from starnavi_app.models import Post
+from starnavi_app.serializers import (
+    PostSerializer, UserSerializer,
+    AuthCustomTokenSerializer, LikeSerializer,
+    UnlikeSerializer,
+)
 
 
 class IsAuthOrReadOnly(permissions.BasePermission):
@@ -31,48 +34,55 @@ class PostViewSet(mixins.CreateModelMixin,
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
+    @action(detail=True, methods=['put'])
     def like(self, request, pk):
-
         post = get_object_or_404(Post, pk=pk)
-
         serializer = LikeSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save(post=post, user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
+    @action(detail=True, methods=['put'])
     def unlike(self, request, pk):
         post = get_object_or_404(Post, pk=pk)
-
         serializer = UnlikeSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save(post=post, user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
 
-class UserCreateViewSet(mixins.CreateModelMixin,
-                        GenericViewSet):
+class UserCreateViewSet(mixins.CreateModelMixin, GenericViewSet):
     permission_classes = (AllowAny,)
     http_method_names = ['post']
 
+    @action(detail=False, methods=['post'])
     def token(self, request):
         serializer = AuthCustomTokenSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
-        token, created = Token.objects.get_or_create(user=user)
-
-        content = {
+        token, _ = Token.objects.get_or_create(user=user)
+        return Response({
             'token': token.key,
-        }
-        return Response(content)
+        })
 
+    @action(detail=False, methods=['post'], url_path='sing-up')
     def sing_up(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response('User created successfully', status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                'User created successfully',
+                status=status.HTTP_201_CREATED
+            )
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )

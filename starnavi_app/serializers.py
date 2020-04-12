@@ -3,7 +3,7 @@ from django.core import exceptions
 from django.utils.translation import gettext as _
 from rest_framework import serializers
 
-from StarNaviApp.models import Post, User, Like
+from starnavi_app.models import Post, User, Like
 
 
 class AuthCustomTokenSerializer(serializers.Serializer):
@@ -61,7 +61,9 @@ class LikeSerializer(serializers.ModelSerializer):
         fields = ('id', 'is_like', 'post', 'user')
 
     def create(self, validated_data):
-        instance, _ = Like.objects.update_or_create(**validated_data, defaults={'is_like': True})
+        instance, _ = Like.objects.update_or_create(
+            **validated_data, defaults={'is_like': True}
+        )
         return instance
 
 
@@ -75,5 +77,7 @@ class UnlikeSerializer(serializers.ModelSerializer):
         fields = ('id', 'is_like', 'post', 'user')
 
     def create(self, validated_data):
-        instance, _ = Like.objects.update_or_create(**validated_data, defaults={'is_like': False})
+        instance, _ = Like.objects.update_or_create(
+            **validated_data, defaults={'is_like': False}
+        )
         return instance
